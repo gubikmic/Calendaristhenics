@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Create Calendar Events for Workouts-->
+        <!--Create Calendar Events from Workouts-->
         <scene sceneID="WTV-ue-NMm">
             <objects>
-                <tableViewController id="43m-yG-R4Z" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" sectionFooterHeight="10" id="vki-c5-CRq">
+                <tableViewController id="43m-yG-R4Z" customClass="StartupViewController" customModule="Calendaristhenics" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" estimatedSectionHeaderHeight="-1" sectionFooterHeight="10" estimatedSectionFooterHeight="-1" id="vki-c5-CRq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -71,16 +71,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authorize Calendar Access" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOE-G4-GGz">
-                                                    <rect key="frame" x="84.5" y="11.5" width="206" height="21"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKs-t0-PuD">
+                                                    <rect key="frame" x="84.5" y="5.5" width="206" height="33"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <state key="normal" title="Authorize Calendar Access"/>
+                                                    <connections>
+                                                        <action selector="authorizeCalendarAccess:" destination="43m-yG-R4Z" eventType="touchUpInside" id="jTa-gK-WCi"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="HOE-G4-GGz" firstAttribute="centerY" secondItem="dkS-Fc-vhY" secondAttribute="centerY" id="4NW-Qu-egb"/>
-                                                <constraint firstItem="HOE-G4-GGz" firstAttribute="centerX" secondItem="dkS-Fc-vhY" secondAttribute="centerX" id="Gk0-nB-1tO"/>
+                                                <constraint firstItem="UKs-t0-PuD" firstAttribute="centerY" secondItem="dkS-Fc-vhY" secondAttribute="centerY" id="6fd-WT-0Q4"/>
+                                                <constraint firstItem="UKs-t0-PuD" firstAttribute="centerX" secondItem="dkS-Fc-vhY" secondAttribute="centerX" id="gr8-nb-hrB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -95,16 +97,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authorize HealthKit Access" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiL-2w-Tyv">
-                                                    <rect key="frame" x="83.5" y="11.5" width="208" height="21"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCF-CJ-jE2">
+                                                    <rect key="frame" x="83.5" y="5.5" width="208" height="33"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <state key="normal" title="Authorize HealthKit Access"/>
+                                                    <connections>
+                                                        <action selector="authorizeHealthKitAccess:" destination="43m-yG-R4Z" eventType="touchUpInside" id="wm3-Mf-t1h"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fiL-2w-Tyv" firstAttribute="centerX" secondItem="kNe-hf-mzh" secondAttribute="centerX" id="UxZ-yY-DdG"/>
-                                                <constraint firstItem="fiL-2w-Tyv" firstAttribute="centerY" secondItem="kNe-hf-mzh" secondAttribute="centerY" id="duK-Th-FyJ"/>
+                                                <constraint firstItem="SCF-CJ-jE2" firstAttribute="centerY" secondItem="kNe-hf-mzh" secondAttribute="centerY" id="Rgq-uB-5O1"/>
+                                                <constraint firstItem="SCF-CJ-jE2" firstAttribute="centerX" secondItem="kNe-hf-mzh" secondAttribute="centerX" id="Svt-Yp-Emd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -116,7 +120,7 @@
                             <outlet property="delegate" destination="43m-yG-R4Z" id="C27-PH-l1E"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Create Calendar Events for Workouts" id="GQi-Pv-bn8"/>
+                    <navigationItem key="navigationItem" title="Create Calendar Events from Workouts" id="GQi-Pv-bn8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoL-jf-77n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

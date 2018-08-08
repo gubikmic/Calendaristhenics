@@ -15,6 +15,7 @@
 		954A87F1211B3D0100573459 /* CalendaristhenicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A87F0211B3D0100573459 /* CalendaristhenicsTests.swift */; };
 		954A880C211B3D1600573459 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954A880B211B3D1600573459 /* HealthKit.framework */; };
 		954A880F211B3F7100573459 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A880E211B3F7100573459 /* HealthKitSetupAssistant.swift */; };
+		954A8819211B4CDD00573459 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A8818211B4CDD00573459 /* StartupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		954A8809211B3D1600573459 /* Calendaristhenics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Calendaristhenics.entitlements; sourceTree = "<group>"; };
 		954A880B211B3D1600573459 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		954A880E211B3F7100573459 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
+		954A8818211B4CDD00573459 /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,7 @@
 				954A87DD211B3D0000573459 /* ViewController.swift */,
 				954A87DB211B3CFF00573459 /* AppDelegate.swift */,
 				954A880E211B3F7100573459 /* HealthKitSetupAssistant.swift */,
-				954A880D211B3EED00573459 /* Resources */,
+				954A8811211B4AFE00573459 /* Resources */,
 			);
 			path = Calendaristhenics;
 			sourceTree = "<group>";
@@ -111,7 +113,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		954A880D211B3EED00573459 /* Resources */ = {
+		954A8810211B474200573459 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				954A8818211B4CDD00573459 /* StartupViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		954A8811211B4AFE00573459 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				954A8809211B3D1600573459 /* Calendaristhenics.entitlements */,
@@ -119,14 +129,7 @@
 				954A87E7211B3D0100573459 /* Info.plist */,
 				954A87E2211B3D0100573459 /* Assets.xcassets */,
 			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		954A8810211B474200573459 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				954A8819211B4CDD00573459 /* StartupViewController.swift in Sources */,
 				954A880F211B3F7100573459 /* HealthKitSetupAssistant.swift in Sources */,
 				954A87DE211B3D0000573459 /* ViewController.swift in Sources */,
 				954A87DC211B3CFF00573459 /* AppDelegate.swift in Sources */,
@@ -330,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -385,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
