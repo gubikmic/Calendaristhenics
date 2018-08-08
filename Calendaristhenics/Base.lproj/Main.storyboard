@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +12,7 @@
         <!--Create Calendar Events from Workouts-->
         <scene sceneID="WTV-ue-NMm">
             <objects>
-                <tableViewController id="43m-yG-R4Z" customClass="StartupViewController" customModule="Calendaristhenics" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="43m-yG-R4Z" customClass="StartupViewController" customModule="Calendaristhenics" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" estimatedSectionHeaderHeight="-1" sectionFooterHeight="10" estimatedSectionFooterHeight="-1" id="vki-c5-CRq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,55 +130,72 @@
         <!--Workouts-->
         <scene sceneID="8PP-ZL-xMr">
             <objects>
-                <tableViewController title="Workouts" id="SmW-gY-4bS" sceneMemberID="viewController">
+                <tableViewController title="Workouts" id="SmW-gY-4bS" customClass="WorkoutsTableViewController" customModule="Calendaristhenics" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LCq-HZ-k8H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" id="KPb-J0-wK7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="staticCellAtTheTop" rowHeight="85" id="KPb-J0-wK7">
                                 <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KPb-J0-wK7" id="5Cq-BQ-Pz9">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gk-EC-Lh8">
-                                            <rect key="frame" x="79" y="27" width="217" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gk-EC-Lh8">
+                                            <rect key="frame" x="79" y="27.5" width="217" height="30"/>
                                             <state key="normal" title="Copy All New Items to Calendar"/>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3gk-EC-Lh8" firstAttribute="centerX" secondItem="5Cq-BQ-Pz9" secondAttribute="centerX" id="I6G-IX-BhA"/>
+                                        <constraint firstItem="3gk-EC-Lh8" firstAttribute="centerY" secondItem="5Cq-BQ-Pz9" secondAttribute="centerY" id="t5U-CL-OAB"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="64" id="zoN-aN-Yq9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="64" id="zoN-aN-Yq9" customClass="WorkoutCell" customModule="Calendaristhenics" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="113" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zoN-aN-Yq9" id="snh-qO-owZ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From startTime to endTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhw-jf-dIU">
-                                            <rect key="frame" x="16" y="40" width="154" height="15"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Running 34:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewu-6c-guB">
-                                            <rect key="frame" x="16" y="15" width="110" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Running 34:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewu-6c-guB">
+                                            <rect key="frame" x="16" y="15" width="305" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbx-Xz-RWb">
-                                            <rect key="frame" x="329" y="16" width="30" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbx-Xz-RWb">
+                                            <rect key="frame" x="329" y="17" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="c4h-C2-EMG"/>
+                                            </constraints>
                                             <state key="normal" title="✓ "/>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From startTime to endTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhw-jf-dIU">
+                                            <rect key="frame" x="36" y="42" width="149.5" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Jbx-Xz-RWb" firstAttribute="leading" secondItem="Ewu-6c-guB" secondAttribute="trailing" priority="750" constant="8" id="3uT-YS-tpm"/>
+                                        <constraint firstItem="Jbx-Xz-RWb" firstAttribute="centerY" secondItem="snh-qO-owZ" secondAttribute="centerY" id="9Ju-Kc-usu"/>
+                                        <constraint firstItem="vhw-jf-dIU" firstAttribute="leading" secondItem="snh-qO-owZ" secondAttribute="leading" constant="36" id="RBV-8j-WBJ"/>
+                                        <constraint firstItem="Ewu-6c-guB" firstAttribute="top" secondItem="snh-qO-owZ" secondAttribute="topMargin" constant="4" id="UGv-zg-sll"/>
+                                        <constraint firstItem="Jbx-Xz-RWb" firstAttribute="trailing" secondItem="snh-qO-owZ" secondAttribute="trailingMargin" id="cle-zn-g60"/>
+                                        <constraint firstItem="Jbx-Xz-RWb" firstAttribute="leading" secondItem="vhw-jf-dIU" secondAttribute="trailing" constant="143.5" id="ijF-Bh-b6G"/>
+                                        <constraint firstItem="Ewu-6c-guB" firstAttribute="leading" secondItem="snh-qO-owZ" secondAttribute="leadingMargin" id="kTk-DO-J1p"/>
+                                        <constraint firstItem="vhw-jf-dIU" firstAttribute="top" secondItem="Ewu-6c-guB" secondAttribute="bottom" constant="6" id="sEa-rF-fNN"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="vhw-jf-dIU" id="9Pl-0J-Sps"/>
+                                    <outlet property="mainLabel" destination="Ewu-6c-guB" id="Cb7-MQ-QS6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -193,7 +211,7 @@
         <!--Navigation Controller-->
         <scene sceneID="EEg-GK-9vV">
             <objects>
-                <navigationController id="gdx-fu-XCp" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gdx-fu-XCp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ic9-dd-4ae">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

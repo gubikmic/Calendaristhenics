@@ -14,6 +14,7 @@ class StartupViewController: UITableViewController {
         super.viewDidLoad()
 
         tableView.delaysContentTouches = false
+        tableView.contentInset.top = 20
     }
 
     @IBAction func authorizeCalendarAccess(_ sender: Any) {

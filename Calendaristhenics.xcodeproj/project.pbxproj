@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		954A87DC211B3CFF00573459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A87DB211B3CFF00573459 /* AppDelegate.swift */; };
-		954A87DE211B3D0000573459 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A87DD211B3D0000573459 /* ViewController.swift */; };
 		954A87E1211B3D0000573459 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954A87DF211B3D0000573459 /* Main.storyboard */; };
 		954A87E3211B3D0100573459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954A87E2211B3D0100573459 /* Assets.xcassets */; };
 		954A87E6211B3D0100573459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954A87E4211B3D0100573459 /* LaunchScreen.storyboard */; };
@@ -16,6 +15,12 @@
 		954A880C211B3D1600573459 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954A880B211B3D1600573459 /* HealthKit.framework */; };
 		954A880F211B3F7100573459 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A880E211B3F7100573459 /* HealthKitSetupAssistant.swift */; };
 		954A8819211B4CDD00573459 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A8818211B4CDD00573459 /* StartupViewController.swift */; };
+		954A881C211B50A300573459 /* WorkoutDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A881B211B50A300573459 /* WorkoutDataProvider.swift */; };
+		954A881E211B51FA00573459 /* WorkoutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A881D211B51FA00573459 /* WorkoutsTableViewController.swift */; };
+		954A8821211B52CE00573459 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A8820211B52CE00573459 /* Workout.swift */; };
+		954A8824211B554D00573459 /* HKWorkoutActivityType+ CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A8823211B554D00573459 /* HKWorkoutActivityType+ CustomStringConvertible.swift */; };
+		954A8827211B57AD00573459 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A8826211B57AD00573459 /* WorkoutCell.swift */; };
+		954A8829211B5F1900573459 /* TimeInterval+hourMinuteString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A8828211B5F1900573459 /* TimeInterval+hourMinuteString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +36,6 @@
 /* Begin PBXFileReference section */
 		954A87D8211B3CFF00573459 /* Calendaristhenics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendaristhenics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		954A87DB211B3CFF00573459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		954A87DD211B3D0000573459 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		954A87E0211B3D0000573459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		954A87E2211B3D0100573459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		954A87E5211B3D0100573459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +47,12 @@
 		954A880B211B3D1600573459 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		954A880E211B3F7100573459 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
 		954A8818211B4CDD00573459 /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
+		954A881B211B50A300573459 /* WorkoutDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDataProvider.swift; sourceTree = "<group>"; };
+		954A881D211B51FA00573459 /* WorkoutsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewController.swift; sourceTree = "<group>"; };
+		954A8820211B52CE00573459 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		954A8823211B554D00573459 /* HKWorkoutActivityType+ CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKWorkoutActivityType+ CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		954A8826211B57AD00573459 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		954A8828211B5F1900573459 /* TimeInterval+hourMinuteString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+hourMinuteString.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +96,13 @@
 		954A87DA211B3CFF00573459 /* Calendaristhenics */ = {
 			isa = PBXGroup;
 			children = (
-				954A8810211B474200573459 /* ViewControllers */,
+				954A881F211B52C500573459 /* Models */,
 				954A87DF211B3D0000573459 /* Main.storyboard */,
-				954A87DD211B3D0000573459 /* ViewController.swift */,
+				954A881B211B50A300573459 /* WorkoutDataProvider.swift */,
+				954A8810211B474200573459 /* ViewControllers */,
 				954A87DB211B3CFF00573459 /* AppDelegate.swift */,
 				954A880E211B3F7100573459 /* HealthKitSetupAssistant.swift */,
+				954A8822211B552300573459 /* Util */,
 				954A8811211B4AFE00573459 /* Resources */,
 			);
 			path = Calendaristhenics;
@@ -116,7 +128,9 @@
 		954A8810211B474200573459 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				954A881D211B51FA00573459 /* WorkoutsTableViewController.swift */,
 				954A8818211B4CDD00573459 /* StartupViewController.swift */,
+				954A8825211B578F00573459 /* Cells */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -130,6 +144,31 @@
 				954A87E2211B3D0100573459 /* Assets.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		954A881F211B52C500573459 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				954A8820211B52CE00573459 /* Workout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		954A8822211B552300573459 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				954A8823211B554D00573459 /* HKWorkoutActivityType+ CustomStringConvertible.swift */,
+				954A8828211B5F1900573459 /* TimeInterval+hourMinuteString.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		954A8825211B578F00573459 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				954A8826211B57AD00573459 /* WorkoutCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +279,13 @@
 			files = (
 				954A8819211B4CDD00573459 /* StartupViewController.swift in Sources */,
 				954A880F211B3F7100573459 /* HealthKitSetupAssistant.swift in Sources */,
-				954A87DE211B3D0000573459 /* ViewController.swift in Sources */,
+				954A8824211B554D00573459 /* HKWorkoutActivityType+ CustomStringConvertible.swift in Sources */,
+				954A881E211B51FA00573459 /* WorkoutsTableViewController.swift in Sources */,
+				954A8829211B5F1900573459 /* TimeInterval+hourMinuteString.swift in Sources */,
+				954A881C211B50A300573459 /* WorkoutDataProvider.swift in Sources */,
 				954A87DC211B3CFF00573459 /* AppDelegate.swift in Sources */,
+				954A8821211B52CE00573459 /* Workout.swift in Sources */,
+				954A8827211B57AD00573459 /* WorkoutCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
