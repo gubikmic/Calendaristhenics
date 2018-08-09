@@ -14,3 +14,24 @@ struct Workout {
     var endDate: Date
     var duration: TimeInterval
 }
+
+extension Workout {
+    var dateString: String {
+        let calendar = Calendar.current
+        let startDay = calendar.component(.day, from: startDate)
+        let endDay = calendar.component(.day, from: endDate)
+        
+        if startDay == endDay {
+            
+        }
+        return "\(Workout.dateFormatter.string(from: startDate)) - \(Workout.dateFormatter.string(from: endDate))"
+    }
+    
+    static var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.current
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        return dateFormatter
+    }()
+}

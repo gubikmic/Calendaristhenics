@@ -56,7 +56,7 @@ class WorkoutsTableViewController: UITableViewController {
             let workoutCell = tableView.dequeueReusableCell(withIdentifier: "workoutCell", for: indexPath) as! WorkoutCell
             let workout = workouts[indexPath.row]
             workoutCell.mainLabel.text = "\(workout.type) \(workout.duration.hourMinuteString)"
-            workoutCell.dateLabel.text = "\(workout.startDate) - \(workout.endDate)"
+            workoutCell.dateLabel.text = workout.dateString
             return workoutCell
         }
     }

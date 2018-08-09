@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9529F32A211C33200048B1D6 /* CalendarAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9529F329211C33200048B1D6 /* CalendarAccess.swift */; };
 		954A87DC211B3CFF00573459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A87DB211B3CFF00573459 /* AppDelegate.swift */; };
 		954A87E1211B3D0000573459 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954A87DF211B3D0000573459 /* Main.storyboard */; };
 		954A87E3211B3D0100573459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954A87E2211B3D0100573459 /* Assets.xcassets */; };
@@ -21,6 +22,8 @@
 		954A8824211B554D00573459 /* HKWorkoutActivityType+ CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A8823211B554D00573459 /* HKWorkoutActivityType+ CustomStringConvertible.swift */; };
 		954A8827211B57AD00573459 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A8826211B57AD00573459 /* WorkoutCell.swift */; };
 		954A8829211B5F1900573459 /* TimeInterval+hourMinuteString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A8828211B5F1900573459 /* TimeInterval+hourMinuteString.swift */; };
+		954A882C211C2AF200573459 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A882B211C2AF200573459 /* CircleView.swift */; };
+		954A882E211C2B2000573459 /* CalendarNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A882D211C2B2000573459 /* CalendarNameCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9529F329211C33200048B1D6 /* CalendarAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAccess.swift; sourceTree = "<group>"; };
 		954A87D8211B3CFF00573459 /* Calendaristhenics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendaristhenics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		954A87DB211B3CFF00573459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		954A87E0211B3D0000573459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		954A8823211B554D00573459 /* HKWorkoutActivityType+ CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKWorkoutActivityType+ CustomStringConvertible.swift"; sourceTree = "<group>"; };
 		954A8826211B57AD00573459 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		954A8828211B5F1900573459 /* TimeInterval+hourMinuteString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+hourMinuteString.swift"; sourceTree = "<group>"; };
+		954A882B211C2AF200573459 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		954A882D211C2B2000573459 /* CalendarNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarNameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				954A8810211B474200573459 /* ViewControllers */,
 				954A87DB211B3CFF00573459 /* AppDelegate.swift */,
 				954A880E211B3F7100573459 /* HealthKitSetupAssistant.swift */,
+				9529F329211C33200048B1D6 /* CalendarAccess.swift */,
+				954A8825211B578F00573459 /* Cells */,
+				954A882A211C2ADE00573459 /* Custom Views */,
 				954A8822211B552300573459 /* Util */,
 				954A8811211B4AFE00573459 /* Resources */,
 			);
@@ -130,7 +139,6 @@
 			children = (
 				954A881D211B51FA00573459 /* WorkoutsTableViewController.swift */,
 				954A8818211B4CDD00573459 /* StartupViewController.swift */,
-				954A8825211B578F00573459 /* Cells */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -167,8 +175,17 @@
 			isa = PBXGroup;
 			children = (
 				954A8826211B57AD00573459 /* WorkoutCell.swift */,
+				954A882D211C2B2000573459 /* CalendarNameCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		954A882A211C2ADE00573459 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				954A882B211C2AF200573459 /* CircleView.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,9 +297,12 @@
 				954A8819211B4CDD00573459 /* StartupViewController.swift in Sources */,
 				954A880F211B3F7100573459 /* HealthKitSetupAssistant.swift in Sources */,
 				954A8824211B554D00573459 /* HKWorkoutActivityType+ CustomStringConvertible.swift in Sources */,
+				9529F32A211C33200048B1D6 /* CalendarAccess.swift in Sources */,
 				954A881E211B51FA00573459 /* WorkoutsTableViewController.swift in Sources */,
 				954A8829211B5F1900573459 /* TimeInterval+hourMinuteString.swift in Sources */,
 				954A881C211B50A300573459 /* WorkoutDataProvider.swift in Sources */,
+				954A882E211C2B2000573459 /* CalendarNameCell.swift in Sources */,
+				954A882C211C2AF200573459 /* CircleView.swift in Sources */,
 				954A87DC211B3CFF00573459 /* AppDelegate.swift in Sources */,
 				954A8821211B52CE00573459 /* Workout.swift in Sources */,
 				954A8827211B57AD00573459 /* WorkoutCell.swift in Sources */,

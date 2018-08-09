@@ -43,5 +43,7 @@
 	</array>
 	<key>NSHealthShareUsageDescription</key>
 	<string>This app reads your workout data and enables you to copy it to a calendar</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This app writes workouts to a calendar of your choice</string>
 </dict>
 </plist>

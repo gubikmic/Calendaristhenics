@@ -37,29 +37,55 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="SmW-gY-4bS" kind="show" id="eFH-UE-lvk"/>
+                                            <segue destination="SmW-gY-4bS" kind="show" identifier="" id="eFH-UE-lvk"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Configuration" id="2DT-1z-IJQ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="SC6-ha-xYT" style="IBUITableViewCellStyleDefault" id="Cvt-0j-HRY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Cvt-0j-HRY" customClass="CalendarNameCell" customModule="Calendaristhenics" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="127" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cvt-0j-HRY" id="YvP-tF-QMA">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SC6-ha-xYT">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQJ-iA-97g">
+                                                    <rect key="frame" x="16" y="11.5" width="69" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="not set" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05F-K6-Y9H">
+                                                    <rect key="frame" x="280" y="11.5" width="53" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGo-jl-LuE" customClass="CircleView" customModule="Calendaristhenics" customModuleProvider="target">
+                                                    <rect key="frame" x="260.5" y="18" width="8" height="8"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="8" id="Gs4-c6-b9E"/>
+                                                        <constraint firstAttribute="width" constant="8" id="lBf-5O-pvO"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="05F-K6-Y9H" firstAttribute="leading" secondItem="vGo-jl-LuE" secondAttribute="trailing" constant="11.5" id="3cH-pQ-mjS"/>
+                                                <constraint firstItem="cQJ-iA-97g" firstAttribute="leading" secondItem="YvP-tF-QMA" secondAttribute="leadingMargin" id="SP4-S9-yag"/>
+                                                <constraint firstItem="cQJ-iA-97g" firstAttribute="centerY" secondItem="YvP-tF-QMA" secondAttribute="centerY" id="TDv-mj-Xp1"/>
+                                                <constraint firstItem="05F-K6-Y9H" firstAttribute="trailing" secondItem="YvP-tF-QMA" secondAttribute="trailingMargin" id="ZmX-Un-or7"/>
+                                                <constraint firstItem="05F-K6-Y9H" firstAttribute="centerY" secondItem="YvP-tF-QMA" secondAttribute="centerY" id="dOW-JQ-4PG"/>
+                                                <constraint firstItem="vGo-jl-LuE" firstAttribute="centerY" secondItem="YvP-tF-QMA" secondAttribute="centerY" id="dbF-e6-8og"/>
+                                                <constraint firstItem="vGo-jl-LuE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cQJ-iA-97g" secondAttribute="trailing" constant="4" id="udg-l4-hef"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="calendarLabel" destination="05F-K6-Y9H" id="N3x-eH-67E"/>
+                                            <outlet property="circleView" destination="vGo-jl-LuE" id="dmZ-UU-ekk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -122,6 +148,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Create Calendar Events from Workouts" id="GQi-Pv-bn8"/>
+                    <connections>
+                        <outlet property="calendarNameCell" destination="Cvt-0j-HRY" id="rUn-6b-1YO"/>
+                        <segue destination="SmW-gY-4bS" kind="show" identifier="showWorkoutsSegue" animates="NO" id="Cjs-vV-SY4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoL-jf-77n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,4 +255,7 @@
             <point key="canvasLocation" x="-177" y="136"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Cjs-vV-SY4"/>
+    </inferredMetricsTieBreakers>
 </document>
