@@ -192,7 +192,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Running 34:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewu-6c-guB">
-                                            <rect key="frame" x="16" y="15" width="244" height="21"/>
+                                            <rect key="frame" x="16" y="15" width="110" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -206,19 +206,19 @@
                                             <state key="normal" title="Copy to Calendar"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From startTime to endTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhw-jf-dIU">
-                                            <rect key="frame" x="36" y="42" width="88.5" height="15"/>
+                                            <rect key="frame" x="36" y="42" width="153.5" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Jbx-Xz-RWb" firstAttribute="leading" secondItem="Ewu-6c-guB" secondAttribute="trailing" priority="750" constant="8" id="3uT-YS-tpm"/>
+                                        <constraint firstItem="Jbx-Xz-RWb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ewu-6c-guB" secondAttribute="trailing" priority="750" constant="8" id="3uT-YS-tpm"/>
                                         <constraint firstItem="Jbx-Xz-RWb" firstAttribute="centerY" secondItem="snh-qO-owZ" secondAttribute="centerY" id="9Ju-Kc-usu"/>
                                         <constraint firstItem="vhw-jf-dIU" firstAttribute="leading" secondItem="snh-qO-owZ" secondAttribute="leading" constant="36" id="RBV-8j-WBJ"/>
                                         <constraint firstItem="Ewu-6c-guB" firstAttribute="top" secondItem="snh-qO-owZ" secondAttribute="topMargin" constant="4" id="UGv-zg-sll"/>
                                         <constraint firstItem="Jbx-Xz-RWb" firstAttribute="trailing" secondItem="snh-qO-owZ" secondAttribute="trailingMargin" id="cle-zn-g60"/>
-                                        <constraint firstItem="Jbx-Xz-RWb" firstAttribute="leading" secondItem="vhw-jf-dIU" secondAttribute="trailing" constant="143.5" id="ijF-Bh-b6G"/>
+                                        <constraint firstItem="Jbx-Xz-RWb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vhw-jf-dIU" secondAttribute="trailing" constant="4" id="ijF-Bh-b6G"/>
                                         <constraint firstItem="Ewu-6c-guB" firstAttribute="leading" secondItem="snh-qO-owZ" secondAttribute="leadingMargin" id="kTk-DO-J1p"/>
                                         <constraint firstItem="vhw-jf-dIU" firstAttribute="top" secondItem="Ewu-6c-guB" secondAttribute="bottom" constant="6" id="sEa-rF-fNN"/>
                                     </constraints>

@@ -25,12 +25,14 @@ class StartupViewController: UITableViewController, EKCalendarChooserDelegate {
         tableView.delaysContentTouches = false
         tableView.contentInset.top = 20
         
-        if calendarAccess && healthKitAccess {
-            performSegue(withIdentifier: "showWorkoutsSegue", sender: self)
-        }
+        calendarAccess = UserDefaults.standard.bool(forKey: "calendarAccess")
+        healthKitAccess = UserDefaults.standard.bool(forKey: "healthKitAccess")
         
         if let calendarIdentifier = UserDefaults.standard.value(forKey: "calendarIdentifier") as? String {
             self.calendarIdentifier = calendarIdentifier
+        }
+        if calendarAccess && healthKitAccess == true {
+            performSegue(withIdentifier: "showWorkoutsSegue", sender: self)
         }
     }
     
@@ -47,6 +49,7 @@ class StartupViewController: UITableViewController, EKCalendarChooserDelegate {
         EKEventStore().requestAccess(to: EKEntityType.event) {
             (accessGranted: Bool, error: Error?) in
             self.calendarAccess = accessGranted
+            UserDefaults.standard.setValue(accessGranted, forKey: "calendarAccess")
             print("Calendar Access granted")
         }
     }
@@ -58,6 +61,8 @@ class StartupViewController: UITableViewController, EKCalendarChooserDelegate {
                 return
             }
         }
+        healthKitAccess = true
+        UserDefaults.standard.setValue(true, forKey: "healthKitAccess")
         print("HealthKit Access granted")
     }
     
