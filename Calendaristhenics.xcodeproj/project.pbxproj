@@ -25,6 +25,7 @@
 		954A882C211C2AF200573459 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A882B211C2AF200573459 /* CircleView.swift */; };
 		954A882E211C2B2000573459 /* CalendarNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A882D211C2B2000573459 /* CalendarNameCell.swift */; };
 		9552C9F6211C7448009C2E17 /* StaticCellAtTheTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552C9F5211C7448009C2E17 /* StaticCellAtTheTop.swift */; };
+		9552C9F9211C7DC9009C2E17 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9552C9F8211C7DC9009C2E17 /* screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		954A882B211C2AF200573459 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		954A882D211C2B2000573459 /* CalendarNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarNameCell.swift; sourceTree = "<group>"; };
 		9552C9F5211C7448009C2E17 /* StaticCellAtTheTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCellAtTheTop.swift; sourceTree = "<group>"; };
+		9552C9F7211C7C98009C2E17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9552C9F8211C7DC9009C2E17 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 		954A87CF211B3CFF00573459 = {
 			isa = PBXGroup;
 			children = (
+				9552C9F7211C7C98009C2E17 /* README.md */,
+				9552C9F8211C7DC9009C2E17 /* screenshot.png */,
 				954A87DA211B3CFF00573459 /* Calendaristhenics */,
 				954A87EF211B3D0100573459 /* CalendaristhenicsTests */,
 				954A87D9211B3CFF00573459 /* Products */,
@@ -280,6 +285,7 @@
 				954A87E6211B3D0100573459 /* LaunchScreen.storyboard in Resources */,
 				954A87E3211B3D0100573459 /* Assets.xcassets in Resources */,
 				954A87E1211B3D0000573459 /* Main.storyboard in Resources */,
+				9552C9F9211C7DC9009C2E17 /* screenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
