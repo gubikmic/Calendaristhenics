@@ -141,6 +141,35 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Clear" id="xJL-hB-lDO">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7Q4-cP-84Z">
+                                        <rect key="frame" x="0.0" y="375" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Q4-cP-84Z" id="O26-CB-xhZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="000-Li-Nb8">
+                                                    <rect key="frame" x="84" y="5.5" width="207" height="33"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="Remove all Workout Events">
+                                                        <color key="titleColor" red="0.96514214409999999" green="0.23746308720000001" blue="0.27723737199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="authorizeHealthKitAccess:" destination="43m-yG-R4Z" eventType="touchUpInside" id="YMG-WT-rwv"/>
+                                                        <action selector="removeAllWorkoutEvents:" destination="43m-yG-R4Z" eventType="touchUpInside" id="5fb-3T-RBL"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="000-Li-Nb8" firstAttribute="centerX" secondItem="O26-CB-xhZ" secondAttribute="centerX" id="a8d-DP-s0K"/>
+                                                <constraint firstItem="000-Li-Nb8" firstAttribute="centerY" secondItem="O26-CB-xhZ" secondAttribute="centerY" id="hGu-oh-JYL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="43m-yG-R4Z" id="s6H-g4-mty"/>
@@ -166,7 +195,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="staticCellAtTheTop" rowHeight="85" id="KPb-J0-wK7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="staticCellAtTheTop" rowHeight="85" id="KPb-J0-wK7" customClass="StaticCellAtTheTop" customModule="Calendaristhenics" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KPb-J0-wK7" id="5Cq-BQ-Pz9">
@@ -183,6 +212,9 @@
                                         <constraint firstItem="3gk-EC-Lh8" firstAttribute="centerY" secondItem="5Cq-BQ-Pz9" secondAttribute="centerY" id="t5U-CL-OAB"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="button" destination="3gk-EC-Lh8" id="uHN-cV-zjj"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="64" id="zoN-aN-Yq9" customClass="WorkoutCell" customModule="Calendaristhenics" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="113" width="375" height="64"/>
