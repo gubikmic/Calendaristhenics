@@ -17,6 +17,7 @@ class StartupViewController: UITableViewController, EKCalendarChooserDelegate {
     let eventStore = EKEventStore()
     var calendarChooser: EKCalendarChooser!
     @IBOutlet weak var calendarNameCell: CalendarNameCell!
+    var calendarIdentifier: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +28,26 @@ class StartupViewController: UITableViewController, EKCalendarChooserDelegate {
         if calendarAccess && healthKitAccess {
             performSegue(withIdentifier: "showWorkoutsSegue", sender: self)
         }
+        
+        if let calendarIdentifier = UserDefaults.standard.value(forKey: "calendarIdentifier") as? String {
+            self.calendarIdentifier = calendarIdentifier
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let calendarIdentifier = calendarIdentifier,
+            let calendar = eventStore.calendar(withIdentifier: calendarIdentifier)
+        {
+            calendarNameCell.calendarLabel.text = calendar.title
+            calendarNameCell.circleView.color = calendar.cgColor
+        }
     }
 
     @IBAction func authorizeCalendarAccess(_ sender: Any) {
         EKEventStore().requestAccess(to: EKEntityType.event) {
             (accessGranted: Bool, error: Error?) in
             self.calendarAccess = accessGranted
+            print("Calendar Access granted")
         }
     }
     
@@ -52,15 +67,12 @@ class StartupViewController: UITableViewController, EKCalendarChooserDelegate {
         }
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let workoutsTableViewController = segue.destination as? WorkoutsTableViewController else { return }
+        workoutsTableViewController.calendarIdentifier = calendarIdentifier
     }
-    */
 
     
     func showCalendarChooser() {
@@ -113,8 +125,10 @@ class StartupViewController: UITableViewController, EKCalendarChooserDelegate {
     func calendarChooserSelectionDidChange(_ calendarChooser: EKCalendarChooser) {
         if let calendar = calendarChooser.selectedCalendars.first {
             print(calendar.title)
+            calendarIdentifier = calendar.calendarIdentifier
             calendarNameCell.calendarLabel.text = calendar.title
             calendarNameCell.circleView.color = calendar.cgColor
+            UserDefaults.standard.setValue(calendarIdentifier, forKey: "calendarIdentifier")
             _ = self.navigationController?.popViewController(animated: true)
         }
     }

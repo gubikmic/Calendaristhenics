@@ -15,7 +15,11 @@ struct Workout {
     var duration: TimeInterval
 }
 
-extension Workout {
+extension Workout: CustomStringConvertible {
+    var description: String {
+        return "\(type) \(duration.hourMinuteString)"
+    }
+    
     var dateString: String {
         let calendar = Calendar.current
         let startDay = calendar.component(.day, from: startDate)

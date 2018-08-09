@@ -192,20 +192,21 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Running 34:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewu-6c-guB">
-                                            <rect key="frame" x="16" y="15" width="305" height="21"/>
+                                            <rect key="frame" x="16" y="15" width="244" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbx-Xz-RWb">
-                                            <rect key="frame" x="329" y="17" width="30" height="30"/>
+                                            <rect key="frame" x="268" y="17" width="91" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="c4h-C2-EMG"/>
                                             </constraints>
-                                            <state key="normal" title="✓ "/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <state key="normal" title="Copy to Calendar"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From startTime to endTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhw-jf-dIU">
-                                            <rect key="frame" x="36" y="42" width="149.5" height="15"/>
+                                            <rect key="frame" x="36" y="42" width="88.5" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -223,6 +224,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="button" destination="Jbx-Xz-RWb" id="5cw-8U-ITB"/>
                                     <outlet property="dateLabel" destination="vhw-jf-dIU" id="9Pl-0J-Sps"/>
                                     <outlet property="mainLabel" destination="Ewu-6c-guB" id="Cb7-MQ-QS6"/>
                                 </connections>

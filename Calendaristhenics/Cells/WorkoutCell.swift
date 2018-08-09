@@ -12,7 +12,8 @@ class WorkoutCell: UITableViewCell {
 
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    
+    @IBOutlet weak var button: UIButton!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
